@@ -1,0 +1,54 @@
+{
+  "name": "mcp-server-audit",
+  "version": "1.0.0",
+  "description": "MCP security scanner & conformance checker — audit Model Context Protocol server configs for leaked secrets, SSRF, missing auth and over-permission. 14 automated checks mapped to OWASP AISVS.",
+  "main": "core/scanner.js",
+  "bin": {
+    "mcp-server-audit": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "core/scanner.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js",
+    "prepublishOnly": "node test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "mcp-security",
+    "mcp-audit",
+    "mcp-scanner",
+    "security-scanner",
+    "security-audit",
+    "conformance",
+    "agent-security",
+    "ai-agents",
+    "tool-poisoning",
+    "prompt-injection",
+    "supply-chain-security",
+    "ssrf",
+    "credential-leak",
+    "owasp",
+    "aisvs",
+    "claude",
+    "cursor"
+  ],
+  "author": "Correctover <wangguigui@correctover.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSHCorrectover/mcp-server-audit.git"
+  },
+  "homepage": "https://correctover.com",
+  "bugs": {
+    "url": "https://github.com/DSHCorrectover/mcp-server-audit/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
