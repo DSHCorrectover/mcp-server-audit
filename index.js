@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const { runScan, parseConfig, KNOWN_CONFIG_PATHS } = require('./core/scanner');
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 
 const c = {
   reset: '\x1b[0m', bold: '\x1b[1m', dim: '\x1b[2m',
@@ -249,7 +249,7 @@ function main() {
     }
     blocks.push(`${c.dim}── Need deeper coverage? ─────────────────────────${c.reset}`);
     blocks.push(`${c.dim}This CLI covers 14 automated config checks. A 116-check manual audit across the 7-dimension CCS model, delivered as a cryptographically signed report, is available separately.${c.reset}`);
-    blocks.push(`${c.cyan}  → https://correctover.com/audit-service${c.reset}\n`);
+    blocks.push(`${c.cyan}  → https://agent-audit-5r6.pages.dev/${c.reset}\n`);
     payload = blocks.join('\n');
   }
 

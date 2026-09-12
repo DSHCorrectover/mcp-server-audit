@@ -82,5 +82,13 @@ const bom = '\uFEFF' + JSON.stringify({ mcpServers: { x: { url: 'http://h' } } }
 const bomReport = runScan(parseConfig(bom, 'mcp.json'));
 assert(statusOf(bomReport, 'mcp-tls') === 'fail', 'BOM-prefixed JSON still parses and detects insecure http://');
 
+console.log('\n[9] v1.0.1 hardcoded-secret detection regression');
+try {
+  require('./test-secrets.js');
+  assert(true, 'secret regression suite (sk-proj/sk-svcacct/sk-ant-api03/AIza/AKIA/ghp_/xoxb/sk_live positives + \${ENV} placeholder negatives)');
+} catch (e) {
+  assert(false, 'secret regression suite threw: ' + e.message);
+}
+
 console.log(`\n${fail === 0 ? '\u2705' : '\u274c'} ${pass} passed, ${fail} failed\n`);
 process.exit(fail === 0 ? 0 : 1);

@@ -1,6 +1,6 @@
 {
   "name": "mcp-server-audit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP security scanner & conformance checker — audit Model Context Protocol server configs for leaked secrets, SSRF, missing auth and over-permission. 14 automated checks mapped to OWASP AISVS.",
   "main": "core/scanner.js",
   "bin": {

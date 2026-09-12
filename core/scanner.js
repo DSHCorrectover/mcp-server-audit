@@ -92,12 +92,26 @@ const CHECKS = [
     check: (cfg) => {
       const str = JSON.stringify(cfg);
       const patterns = [
-        /sk-[a-zA-Z0-9]{20,}/,
-        /AKIA[A-Z0-9]{16}/,
-        /ghp_[a-zA-Z0-9]{36}/,
-        /github_pat_[A-Za-z0-9_]{20,}/,
+        // OpenAI: legacy sk-..., current project keys sk-proj-..., service-account sk-svcacct-...
+        /sk-(proj|svcacct|admin|org)-[A-Za-z0-9][A-Za-z0-9_-]{18,}/,
+        /sk-[A-Za-z0-9]{20,}/,
+        // Anthropic
+        /sk-ant-api03-[A-Za-z0-9_-]{20,}/,
+        // Google API keys
+        /AIza[0-9A-Za-z_-]{35}/,
+        // AWS access key IDs / secret access keys
+        /AKIA[0-9A-Z]{16}/,
+        /ASIA[0-9A-Z]{16}/,
+        // GitHub tokens
+        /ghp_[A-Za-z0-9]{36}/,
+        /github_pat_[A-Za-z0-9_]{22,}/,
+        /gho_[A-Za-z0-9]{36}/,
+        // Slack
         /xox[baprs]-[A-Za-z0-9-]{10,}/,
-        /password\s*:\s*["'][^"']+["']/i
+        // Stripe live keys
+        /(?:rk|sk)_(?:live|test)_[A-Za-z0-9]{16,}/,
+        // Generic high-signal bearer/assignment secrets with non-trivial entropy
+        /"(?:password|passwd|pwd|secret|client_secret|api[_-]?key|access[_-]?token|auth[_-]?token)"\s*:\s*"[^"$\s{][^"]{7,}"/i
       ];
       return patterns.some(p => p.test(str)) ? 'fail' : 'pass';
     },

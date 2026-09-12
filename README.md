@@ -77,7 +77,7 @@ This open-source CLI is deliberately scoped and honest:
 - **It does** 14 fast, deterministic **configuration-level** checks locally (the table above).
 - **It does not** read your MCP server source, trace live traffic, or claim to cover every agent-risk class.
 
-Deeper review — tool-poisoning / rug-pull analysis across server code, schema and permission analysis, and a **116-check manual audit across the 7-dimension CCS conformance model** (Structure, Schema, Latency, Cost, Identity, Integrity, Security), delivered as a **cryptographically signed audit report** — is a separate human-led service: **https://correctover.com/audit-service**
+Deeper review — tool-poisoning / rug-pull analysis across server code, schema and permission analysis, and a **116-check manual audit across the 7-dimension CCS conformance model** (Structure, Schema, Latency, Cost, Identity, Integrity, Security), delivered as a **cryptographically signed audit report** — is a separate human-led service: **https://agent-audit-5r6.pages.dev/**
 
 ## Standards
 
