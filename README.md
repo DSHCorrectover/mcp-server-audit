@@ -1,5 +1,7 @@
 # mcp-server-audit
 
+[**Commercial verification engagements — USD 8,000–15,000, court-ready dossier**](https://dshcorrectover.github.io/correctover-recovery-admission/services.html) · [**Independent audit & conformance**](https://dshcorrectover.github.io/correctover-recovery-admission/services.html)
+
 > Static security scanner for **MCP (Model Context Protocol) server configuration** — catch leaked secrets, SSRF, missing auth and over-permission **before you mount a server**. 14 automated checks mapped to **OWASP AISVS 1.0**. No sign-up, runs locally, nothing is uploaded.
 
 [![npm version](https://img.shields.io/npm/v/mcp-server-audit)](https://www.npmjs.com/package/mcp-server-audit)
